@@ -8,8 +8,6 @@ services:
 before_install:
   - docker build -t typeblkcofe/docker-react -f Dockerfile.dev .
 
-echo "WE ARE DONE IN FIRST STAGE"
-
 script:
   - sh "echo 'WE ARE DONE IN FIRST STAGE'"
   - docker run -e CI=true typeblkcofe/docker-react npm run test
